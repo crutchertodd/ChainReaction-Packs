@@ -1,0 +1,796 @@
+{
+  "packId": "portal-madness",
+  "name": "Portal Madness",
+  "author": "Shockwave Lab Team",
+  "version": 1,
+  "levels": [
+    {
+      "number": 1,
+      "name": "First Warp",
+      "description": "A wall blocks the way. The portal is your only path.",
+      "gravity": 200,
+      "maxBombs": 2,
+      "timeLimit": 12,
+      "ballStart": { "x": 60, "y": 80 },
+      "goal": {
+        "bounds": { "x": 300, "y": 510, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 195, "y": 10, "width": 15, "height": 580 } }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 100, "y": 450 }, "radius": 22, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 300, "y": 350 }, "radius": 22, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 2,
+      "name": "Straight Through",
+      "description": "Normal gravity. Push the orb into the portal overhead.",
+      "gravity": 400,
+      "maxBombs": 2,
+      "timeLimit": 12,
+      "ballStart": { "x": 200, "y": 80 },
+      "goal": {
+        "bounds": { "x": 170, "y": 520, "width": 60, "height": 50 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 10, "y": 300, "width": 380, "height": 15 } }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 350, "y": 200 }, "radius": 22, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 200, "y": 420 }, "radius": 22, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 3,
+      "name": "Heavy Drop",
+      "description": "Heavy gravity pulls hard. Get to the portal fast.",
+      "gravity": 600,
+      "maxBombs": 3,
+      "timeLimit": 12,
+      "ballStart": { "x": 60, "y": 80 },
+      "goal": {
+        "bounds": { "x": 300, "y": 510, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 195, "y": 10, "width": 15, "height": 400 } },
+        { "bounds": { "x": 10, "y": 400, "width": 200, "height": 15 } }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 100, "y": 350 }, "radius": 22, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 300, "y": 150 }, "radius": 22, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 4,
+      "name": "Feather Portal",
+      "description": "Almost no gravity. Float gently into the warp.",
+      "gravity": 100,
+      "maxBombs": 2,
+      "timeLimit": 15,
+      "ballStart": { "x": 60, "y": 300 },
+      "goal": {
+        "bounds": { "x": 300, "y": 260, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 195, "y": 100, "width": 15, "height": 400 } }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 100, "y": 520 }, "radius": 22, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 300, "y": 120 }, "radius": 22, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 5,
+      "name": "Void Passage",
+      "description": "Zero gravity. Aim carefully — there's nothing to slow you down.",
+      "gravity": 0,
+      "maxBombs": 2,
+      "timeLimit": 12,
+      "ballStart": { "x": 60, "y": 80 },
+      "goal": {
+        "bounds": { "x": 300, "y": 510, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 195, "y": 10, "width": 15, "height": 580 } }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 100, "y": 500 }, "radius": 22, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 300, "y": 400 }, "radius": 22, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 6,
+      "name": "Bumper Gate",
+      "description": "A bumper guards the portal entrance. Angle your shot.",
+      "gravity": 300,
+      "maxBombs": 2,
+      "timeLimit": 12,
+      "ballStart": { "x": 60, "y": 80 },
+      "goal": {
+        "bounds": { "x": 300, "y": 510, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 195, "y": 10, "width": 15, "height": 580 } }
+      ],
+      "bumpers": [
+        { "center": { "x": 100, "y": 350 }, "radius": 35, "shape": "Full", "bounciness": 1.3 }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 100, "y": 500 }, "radius": 20, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 300, "y": 300 }, "radius": 20, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 7,
+      "name": "Ricochet Warp",
+      "description": "Bounce off the bumper, through the portal, to the goal.",
+      "gravity": 400,
+      "maxBombs": 3,
+      "timeLimit": 12,
+      "ballStart": { "x": 340, "y": 80 },
+      "goal": {
+        "bounds": { "x": 30, "y": 510, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 195, "y": 10, "width": 15, "height": 580 } }
+      ],
+      "bumpers": [
+        { "center": { "x": 300, "y": 300 }, "radius": 35, "shape": "HalfLeft", "bounciness": 1.4 },
+        { "center": { "x": 80, "y": 400 }, "radius": 30, "shape": "Full", "bounciness": 1.3 }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 340, "y": 500 }, "radius": 20, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 80, "y": 300 }, "radius": 20, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 8,
+      "name": "Heavy Bounce",
+      "description": "High gravity and bumpers make the portal hard to reach.",
+      "gravity": 550,
+      "maxBombs": 3,
+      "timeLimit": 15,
+      "ballStart": { "x": 200, "y": 60 },
+      "goal": {
+        "bounds": { "x": 170, "y": 520, "width": 60, "height": 50 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 10, "y": 310, "width": 380, "height": 15 } }
+      ],
+      "bumpers": [
+        { "center": { "x": 100, "y": 180 }, "radius": 30, "shape": "Full", "bounciness": 1.4 },
+        { "center": { "x": 300, "y": 180 }, "radius": 30, "shape": "Full", "bounciness": 1.4 },
+        { "center": { "x": 200, "y": 450 }, "radius": 35, "shape": "HalfTop", "bounciness": 1.3 }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 350, "y": 250 }, "radius": 20, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 50, "y": 430 }, "radius": 20, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 9,
+      "name": "Weightless Bumpers",
+      "description": "No gravity. Bumpers redirect you toward the portal.",
+      "gravity": 0,
+      "maxBombs": 2,
+      "timeLimit": 12,
+      "ballStart": { "x": 60, "y": 300 },
+      "goal": {
+        "bounds": { "x": 300, "y": 260, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 195, "y": 10, "width": 15, "height": 580 } }
+      ],
+      "bumpers": [
+        { "center": { "x": 80, "y": 150 }, "radius": 30, "shape": "HalfBottom", "bounciness": 1.5 },
+        { "center": { "x": 300, "y": 150 }, "radius": 30, "shape": "Full", "bounciness": 1.3 }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 80, "y": 520 }, "radius": 20, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 300, "y": 420 }, "radius": 20, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 10,
+      "name": "Bumper Corridor",
+      "description": "A row of bumpers lines the path from portal to goal.",
+      "gravity": 350,
+      "maxBombs": 3,
+      "timeLimit": 15,
+      "ballStart": { "x": 60, "y": 80 },
+      "goal": {
+        "bounds": { "x": 300, "y": 510, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 195, "y": 10, "width": 15, "height": 580 } }
+      ],
+      "bumpers": [
+        { "center": { "x": 260, "y": 150 }, "radius": 25, "shape": "Full", "bounciness": 1.3 },
+        { "center": { "x": 340, "y": 250 }, "radius": 25, "shape": "Full", "bounciness": 1.3 },
+        { "center": { "x": 260, "y": 350 }, "radius": 25, "shape": "Full", "bounciness": 1.3 },
+        { "center": { "x": 340, "y": 450 }, "radius": 25, "shape": "Full", "bounciness": 1.3 }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 100, "y": 450 }, "radius": 20, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 300, "y": 80 }, "radius": 20, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 11,
+      "name": "Pad Launch",
+      "description": "A bounce pad launches you into the portal.",
+      "gravity": 450,
+      "maxBombs": 2,
+      "timeLimit": 12,
+      "ballStart": { "x": 60, "y": 80 },
+      "goal": {
+        "bounds": { "x": 300, "y": 510, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 195, "y": 10, "width": 15, "height": 580 } }
+      ],
+      "bouncePads": [
+        {
+          "bounds": { "x": 40, "y": 450, "width": 80, "height": 15 },
+          "normal": { "x": 0.2, "y": -1 },
+          "bounciness": 1.5
+        }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 120, "y": 200 }, "radius": 22, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 300, "y": 350 }, "radius": 22, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 12,
+      "name": "Double Pad Warp",
+      "description": "Two pads, one portal. Chain the bounces.",
+      "gravity": 500,
+      "maxBombs": 3,
+      "timeLimit": 15,
+      "ballStart": { "x": 200, "y": 60 },
+      "goal": {
+        "bounds": { "x": 170, "y": 520, "width": 60, "height": 50 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 10, "y": 310, "width": 380, "height": 15 } }
+      ],
+      "bouncePads": [
+        {
+          "bounds": { "x": 50, "y": 200, "width": 80, "height": 15 },
+          "normal": { "x": 0.5, "y": -1 },
+          "bounciness": 1.4
+        },
+        {
+          "bounds": { "x": 270, "y": 150, "width": 80, "height": 15 },
+          "normal": { "x": -0.3, "y": -1 },
+          "bounciness": 1.3
+        }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 200, "y": 60 }, "radius": 20, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 200, "y": 450 }, "radius": 20, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 13,
+      "name": "Sliding Warp",
+      "description": "The bounce pad slides back and forth. Time it right.",
+      "gravity": 250,
+      "maxBombs": 3,
+      "timeLimit": 15,
+      "ballStart": { "x": 60, "y": 300 },
+      "goal": {
+        "bounds": { "x": 300, "y": 510, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 195, "y": 10, "width": 15, "height": 580 } }
+      ],
+      "bouncePads": [
+        {
+          "bounds": { "x": 30, "y": 500, "width": 80, "height": 15 },
+          "normal": { "x": 0, "y": -1 },
+          "bounciness": 1.4,
+          "moveEnd": { "x": 100, "y": 500 },
+          "moveSpeed": 2.5
+        }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 80, "y": 150 }, "radius": 22, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 300, "y": 350 }, "radius": 22, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 14,
+      "name": "Pad & Bumper Warp",
+      "description": "A pad launches you to a bumper that deflects into the portal.",
+      "gravity": 400,
+      "maxBombs": 3,
+      "timeLimit": 15,
+      "ballStart": { "x": 60, "y": 80 },
+      "goal": {
+        "bounds": { "x": 300, "y": 510, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 195, "y": 10, "width": 15, "height": 580 } }
+      ],
+      "bouncePads": [
+        {
+          "bounds": { "x": 30, "y": 350, "width": 80, "height": 15 },
+          "normal": { "x": 0.3, "y": -1 },
+          "bounciness": 1.4
+        }
+      ],
+      "bumpers": [
+        { "center": { "x": 130, "y": 180 }, "radius": 30, "shape": "HalfBottom", "bounciness": 1.3 }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 60, "y": 150 }, "radius": 20, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 300, "y": 300 }, "radius": 20, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 15,
+      "name": "Zero-G Bounce Portal",
+      "description": "No gravity. Pads and bumpers are your only guidance.",
+      "gravity": 0,
+      "maxBombs": 3,
+      "timeLimit": 15,
+      "ballStart": { "x": 60, "y": 300 },
+      "goal": {
+        "bounds": { "x": 300, "y": 260, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 195, "y": 10, "width": 15, "height": 580 } }
+      ],
+      "bouncePads": [
+        {
+          "bounds": { "x": 30, "y": 150, "width": 80, "height": 15 },
+          "normal": { "x": 0, "y": 1 },
+          "bounciness": 1.3
+        }
+      ],
+      "bumpers": [
+        { "center": { "x": 100, "y": 500 }, "radius": 30, "shape": "HalfTop", "bounciness": 1.4 },
+        { "center": { "x": 300, "y": 150 }, "radius": 25, "shape": "Full", "bounciness": 1.3 }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 100, "y": 450 }, "radius": 20, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 300, "y": 420 }, "radius": 20, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 16,
+      "name": "Gravity Pull Warp",
+      "description": "A gravity zone pulls you toward the portal.",
+      "gravity": 300,
+      "maxBombs": 2,
+      "timeLimit": 12,
+      "ballStart": { "x": 60, "y": 80 },
+      "goal": {
+        "bounds": { "x": 300, "y": 510, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 195, "y": 10, "width": 15, "height": 580 } }
+      ],
+      "gravityZones": [
+        {
+          "center": { "x": 100, "y": 350 },
+          "radius": 80,
+          "direction": { "x": 0, "y": 1 },
+          "strength": 350
+        }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 100, "y": 520 }, "radius": 22, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 300, "y": 350 }, "radius": 22, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 17,
+      "name": "Competing Forces",
+      "description": "Two gravity zones fight over the orb. Pick your path.",
+      "gravity": 200,
+      "maxBombs": 3,
+      "timeLimit": 15,
+      "ballStart": { "x": 60, "y": 80 },
+      "goal": {
+        "bounds": { "x": 300, "y": 510, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 195, "y": 10, "width": 15, "height": 580 } }
+      ],
+      "gravityZones": [
+        {
+          "center": { "x": 80, "y": 200 },
+          "radius": 70,
+          "direction": { "x": 0, "y": 1 },
+          "strength": 300
+        },
+        {
+          "center": { "x": 80, "y": 450 },
+          "radius": 70,
+          "direction": { "x": 0, "y": -1 },
+          "strength": 250
+        }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 80, "y": 330 }, "radius": 20, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 300, "y": 350 }, "radius": 20, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 18,
+      "name": "Gravity Slingshot",
+      "description": "The gravity zone curves your path into the portal.",
+      "gravity": 150,
+      "maxBombs": 2,
+      "timeLimit": 15,
+      "ballStart": { "x": 60, "y": 80 },
+      "goal": {
+        "bounds": { "x": 30, "y": 510, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 10, "y": 400, "width": 200, "height": 15 } }
+      ],
+      "gravityZones": [
+        {
+          "center": { "x": 300, "y": 250 },
+          "radius": 100,
+          "direction": { "x": -0.7, "y": 0.7 },
+          "strength": 400
+        }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 350, "y": 500 }, "radius": 22, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 80, "y": 480 }, "radius": 22, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 19,
+      "name": "Gravity Maze Warp",
+      "description": "Gravity zones form a path. The portal waits at the end.",
+      "gravity": 0,
+      "maxBombs": 3,
+      "timeLimit": 15,
+      "ballStart": { "x": 60, "y": 80 },
+      "goal": {
+        "bounds": { "x": 300, "y": 510, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 195, "y": 10, "width": 15, "height": 580 } }
+      ],
+      "gravityZones": [
+        {
+          "center": { "x": 80, "y": 200 },
+          "radius": 60,
+          "direction": { "x": 0, "y": 1 },
+          "strength": 300
+        },
+        {
+          "center": { "x": 80, "y": 400 },
+          "radius": 60,
+          "direction": { "x": 0, "y": 1 },
+          "strength": 300
+        }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 80, "y": 540 }, "radius": 22, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 300, "y": 300 }, "radius": 22, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 20,
+      "name": "Force Field Portal",
+      "description": "Gravity zones and bumpers. The portal is your escape.",
+      "gravity": 350,
+      "maxBombs": 3,
+      "timeLimit": 15,
+      "ballStart": { "x": 60, "y": 80 },
+      "goal": {
+        "bounds": { "x": 300, "y": 510, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 195, "y": 10, "width": 15, "height": 580 } }
+      ],
+      "bumpers": [
+        { "center": { "x": 100, "y": 250 }, "radius": 30, "shape": "Full", "bounciness": 1.4 },
+        { "center": { "x": 300, "y": 400 }, "radius": 30, "shape": "Full", "bounciness": 1.3 }
+      ],
+      "gravityZones": [
+        {
+          "center": { "x": 80, "y": 420 },
+          "radius": 70,
+          "direction": { "x": 0, "y": 1 },
+          "strength": 300
+        }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 80, "y": 540 }, "radius": 20, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 300, "y": 200 }, "radius": 20, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 21,
+      "name": "Double Portal",
+      "description": "Two portal pairs. Pick the right one.",
+      "gravity": 400,
+      "maxBombs": 3,
+      "timeLimit": 15,
+      "ballStart": { "x": 60, "y": 80 },
+      "goal": {
+        "bounds": { "x": 300, "y": 510, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 195, "y": 10, "width": 15, "height": 580 } },
+        { "bounds": { "x": 210, "y": 400, "width": 180, "height": 15 } }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 60, "y": 300 }, "radius": 18, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 300, "y": 100 }, "radius": 18, "linkedPortalId": "A" },
+        { "id": "C", "center": { "x": 140, "y": 500 }, "radius": 18, "linkedPortalId": "D" },
+        { "id": "D", "center": { "x": 300, "y": 480 }, "radius": 18, "linkedPortalId": "C" }
+      ]
+    },
+    {
+      "number": 22,
+      "name": "Portal Chain",
+      "description": "Two warps in sequence. The first leads to the second.",
+      "gravity": 500,
+      "maxBombs": 3,
+      "timeLimit": 15,
+      "ballStart": { "x": 60, "y": 80 },
+      "goal": {
+        "bounds": { "x": 300, "y": 510, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 130, "y": 10, "width": 15, "height": 580 } },
+        { "bounds": { "x": 260, "y": 10, "width": 15, "height": 580 } }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 60, "y": 450 }, "radius": 20, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 200, "y": 150 }, "radius": 20, "linkedPortalId": "A" },
+        { "id": "C", "center": { "x": 200, "y": 450 }, "radius": 20, "linkedPortalId": "D" },
+        { "id": "D", "center": { "x": 330, "y": 300 }, "radius": 20, "linkedPortalId": "C" }
+      ]
+    },
+    {
+      "number": 23,
+      "name": "Moving Wall Warp",
+      "description": "The wall shifts. The portal stays. Time your push.",
+      "gravity": 300,
+      "maxBombs": 3,
+      "timeLimit": 18,
+      "ballStart": { "x": 60, "y": 80 },
+      "goal": {
+        "bounds": { "x": 300, "y": 510, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 195, "y": 10, "width": 15, "height": 250 } },
+        { "bounds": { "x": 195, "y": 350, "width": 15, "height": 240 } },
+        {
+          "bounds": { "x": 50, "y": 300, "width": 120, "height": 15 },
+          "moveEnd": { "x": 50, "y": 200 },
+          "moveSpeed": 2
+        }
+      ],
+      "bumpers": [
+        { "center": { "x": 300, "y": 300 }, "radius": 25, "shape": "Full", "bounciness": 1.3 }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 100, "y": 500 }, "radius": 22, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 300, "y": 150 }, "radius": 22, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 24,
+      "name": "The Gauntlet",
+      "description": "Moving bumpers, gravity zones, and one portal. Good luck.",
+      "gravity": 450,
+      "maxBombs": 4,
+      "maxBombPower": 700,
+      "timeLimit": 18,
+      "ballStart": { "x": 60, "y": 80 },
+      "goal": {
+        "bounds": { "x": 300, "y": 510, "width": 70, "height": 60 }
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 195, "y": 10, "width": 15, "height": 580 } }
+      ],
+      "bouncePads": [
+        {
+          "bounds": { "x": 30, "y": 300, "width": 80, "height": 15 },
+          "normal": { "x": 0.3, "y": -1 },
+          "bounciness": 1.4
+        }
+      ],
+      "bumpers": [
+        {
+          "center": { "x": 100, "y": 200 },
+          "radius": 25,
+          "shape": "Full",
+          "bounciness": 1.4,
+          "moveEnd": { "x": 150, "y": 200 },
+          "moveSpeed": 2
+        },
+        { "center": { "x": 300, "y": 250 }, "radius": 30, "shape": "HalfLeft", "bounciness": 1.3 }
+      ],
+      "gravityZones": [
+        {
+          "center": { "x": 80, "y": 450 },
+          "radius": 60,
+          "direction": { "x": 0, "y": -1 },
+          "strength": 300
+        }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 80, "y": 130 }, "radius": 20, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 300, "y": 350 }, "radius": 20, "linkedPortalId": "A" }
+      ]
+    },
+    {
+      "number": 25,
+      "name": "Portal Master",
+      "description": "Every element. Two portal pairs. All the gravity. Master the madness.",
+      "gravity": 350,
+      "maxBombs": 4,
+      "maxBombPower": 800,
+      "timeLimit": 20,
+      "ballStart": { "x": 60, "y": 80 },
+      "goal": {
+        "bounds": { "x": 300, "y": 510, "width": 70, "height": 60 },
+        "maxEntrySpeed": 350
+      },
+      "obstacles": [
+        { "bounds": { "x": 0, "y": 0, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 590, "width": 400, "height": 10 } },
+        { "bounds": { "x": 0, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 390, "y": 0, "width": 10, "height": 600 } },
+        { "bounds": { "x": 195, "y": 10, "width": 15, "height": 280 } },
+        { "bounds": { "x": 195, "y": 380, "width": 15, "height": 210 } },
+        {
+          "bounds": { "x": 50, "y": 350, "width": 120, "height": 15 },
+          "moveEnd": { "x": 50, "y": 250 },
+          "moveSpeed": 2
+        }
+      ],
+      "bouncePads": [
+        {
+          "bounds": { "x": 270, "y": 560, "width": 80, "height": 15 },
+          "normal": { "x": -0.3, "y": -1 },
+          "bounciness": 1.4
+        }
+      ],
+      "bumpers": [
+        {
+          "center": { "x": 100, "y": 200 },
+          "radius": 25,
+          "shape": "Full",
+          "bounciness": 1.4,
+          "moveEnd": { "x": 150, "y": 200 },
+          "moveSpeed": 2
+        },
+        { "center": { "x": 300, "y": 250 }, "radius": 30, "shape": "HalfLeft", "bounciness": 1.3 },
+        { "center": { "x": 300, "y": 420 }, "radius": 25, "shape": "Full", "bounciness": 1.3 }
+      ],
+      "gravityZones": [
+        {
+          "center": { "x": 80, "y": 480 },
+          "radius": 60,
+          "direction": { "x": 0, "y": -1 },
+          "strength": 300
+        },
+        {
+          "center": { "x": 300, "y": 150 },
+          "radius": 50,
+          "direction": { "x": 0, "y": 1 },
+          "strength": 250
+        }
+      ],
+      "portals": [
+        { "id": "A", "center": { "x": 80, "y": 130 }, "radius": 18, "linkedPortalId": "B" },
+        { "id": "B", "center": { "x": 250, "y": 330 }, "radius": 18, "linkedPortalId": "A" },
+        { "id": "C", "center": { "x": 140, "y": 530 }, "radius": 18, "linkedPortalId": "D" },
+        { "id": "D", "center": { "x": 330, "y": 480 }, "radius": 18, "linkedPortalId": "C" }
+      ]
+    }
+  ]
+}

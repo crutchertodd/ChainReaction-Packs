@@ -1,0 +1,14 @@
+{
+  "packs": [
+    {
+      "packId": "zero-g",
+      "version": 1,
+      "filename": "zerog.json"
+    },
+    {
+      "packId": "portal-madness",
+      "version": 1,
+      "filename": "portalmadness.json"
+    }
+  ]
+}
